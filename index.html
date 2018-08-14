@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="icon" href="images/ff-moogle.png">
+    <title>Moogle</title>
+</head>
+<body>
+    <div class="row fixed-heading">
+        <div class="col-md-12 fixed-heading-col">
+            <!-- Toying with different image site-titles -->
+            <!-- ======================================= -->
+            <!-- <img style="width:450px;" src="@Url.Content("/images/moogleapi-logo.png")"> -->
+            <!-- <img style="width:450px;" src="@Url.Content("/images/moogleapi-bw.png")"> -->
+            <!-- <img style="width:450px;border-radius:100px;" src="@Url.Content("/images/moogleapi-halloween.png")"> -->
+            
+            <h1 class="site-title">
+                <span class="blue no-space">M</span>
+                <span class="red no-space">o</span>
+                <span class="yellow no-space">o</span>
+                <span class="blue no-space">g</span>
+                <span class="green no-space">l</span>
+                <span class="red no-space">e</span>
+            </h1>
+            
+        </div>
+    </div>
+    <div id="vue-app" class="container">
+        <div class="search-card">
+            <form class="form-inline has-feedback">
+                <input id="search" v-model="search" class="form-control" type="input">
+                <i id="search-icon" class="glyphicon glyphicon-search form-control-feedback blue"></i>
+            </form>
+        </div>
+        <div v-for="(character) in filtered" :key="character.id" class="row moogle-row mix-buffer" >
+            <div class="col-md-8">
+                <h4 class="moogle-h4"><strong>{{character.name}}</strong></h4>
+                <h7 class="search-result">To learn more visit <a :href="'https://www.google.com/search?q=final+fantasy+'+character.name" target="_blank">https://www.google.com/search?q={{character.name}}</a></h7><br/>
+                <p class="dark-bluish-gray">{{character.description}}</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p><strong>Origin:</strong> {{character.origin}}<br/>
+                        <strong>Job:</strong> {{character.job}}<br/>
+                        <strong>Age:</strong> {{character.age}}</p></div>
+                        <div class="col-md-6"><p><strong>Race:</strong> {{character.race}}<br/>
+                        <strong>Height:</strong> {{character.height}}m<br/>
+                        <strong>Weight:</strong> {{character.weight}}kg</p>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="moogle-modal-button" data-toggle="modal" data-target="#imageModal" v-on:click="setModal(character)">
+                    <img class="moogle-img" :src="character.picture" :alt="character.name" title="Click to view a larger picture"><br/>
+                </button>
+                
+                <div id="imageModal" class="modal fade" role="dialog">
+    
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="text-center"><strong>{{modal.name}}</strong><span class="close" data-dismiss="modal">X</span></h3>
+                            </div>
+                            <div class="modal-body">
+                                <img class="moogle-modal-img" :src="modal.picture" :alt="modal.name" :title="modal.name">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <br/>
+                
+            </div>
+            <div class="row moogle-row">
+                <div class="col-md-4 pull-right">
+                    <button class="h5 blue pull-right btn-link" v-on:click="scrollTop()">Back to top</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<script src="js/site.js"></script>
+</html>
