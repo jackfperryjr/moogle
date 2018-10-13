@@ -1,297 +1,7 @@
 /* Importing Google fonts */
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-/* Defining some animations */
-@-webkit-keyframes hvr-hang {
-  0% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-  50% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-@keyframes hvr-hang {
-  0% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-  50% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-@-webkit-keyframes hvr-hang-sink {
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-@keyframes hvr-hang-sink {
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-.hvr-hang {
-  -webkit-animation-name: hvr-hang;
-  animation-name: hvr-hang;
-  -webkit-animation-duration: 2s, 3s;
-  animation-duration: 2s, 3s;
-  -webkit-animation-delay: 0s, .3s;
-  animation-delay: 0s, .3s;
-  -webkit-animation-timing-function: ease-out, ease-in-out;
-  animation-timing-function: ease-out, ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-}
-@-webkit-keyframes bounceInDown {
-    from,
-    60%,
-    75%,
-    90%,
-    to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -3000px, 0);
-      transform: translate3d(0, -3000px, 0);
-    }
-  
-    60% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 25px, 0);
-      transform: translate3d(0, 25px, 0);
-    }
-  
-    75% {
-      -webkit-transform: translate3d(0, -10px, 0);
-      transform: translate3d(0, -10px, 0);
-    }
-  
-    90% {
-      -webkit-transform: translate3d(0, 5px, 0);
-      transform: translate3d(0, 5px, 0);
-    }
-  
-    to {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  @keyframes bounceInDown {
-    from,
-    60%,
-    75%,
-    90%,
-    to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -3000px, 0);
-      transform: translate3d(0, -3000px, 0);
-    }
-    60% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 25px, 0);
-      transform: translate3d(0, 25px, 0);
-    }
-    75% {
-      -webkit-transform: translate3d(0, -10px, 0);
-      transform: translate3d(0, -10px, 0);
-    }
-    90% {
-      -webkit-transform: translate3d(0, 5px, 0);
-      transform: translate3d(0, 5px, 0);
-    }
-    to {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  .bounceInDown {
-    -webkit-animation-name: bounceInDown;
-    animation-name: bounceInDown;
-    -webkit-animation-duration: 1s, 2s;
-    animation-duration: 1s, 2s;
-    -webkit-animation-delay: 0s, .3s;
-    animation-delay: 0s, .3s;
-    -webkit-animation-timing-function: ease-out, ease-in-out;
-    animation-timing-function: ease-out, ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-direction: normal;
-    animation-direction: normal;
-  }
-  @keyframes lightSpeedIn {
-    from {
-      -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
-      transform: translate3d(100%, 0, 0) skewX(-30deg);
-      opacity: 0;
-    }
-    60% {
-      -webkit-transform: skewX(20deg);
-      transform: skewX(20deg);
-      opacity: 1;
-    }
-    80% {
-      -webkit-transform: skewX(-5deg);
-      transform: skewX(-5deg);
-      opacity: 1;
-    }
-    to {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-  }
-  .lightSpeedIn {
-    -webkit-animation-name: lightSpeedIn;
-    animation-name: lightSpeedIn;
-    -webkit-animation-duration: 1s, 2s;
-    animation-duration: 1s, 2s;
-    -webkit-animation-delay: 0s, .3s;
-    animation-delay: 0s, .3s;
-    -webkit-animation-timing-function: ease-out, ease-in-out;
-    animation-timing-function: ease-out, ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-direction: normal;
-    animation-direction: normal;
-  }
-  @-webkit-keyframes lightSpeedOut {
-    from {
-      opacity: 1;
-    }
-  
-    to {
-      -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
-      transform: translate3d(100%, 0, 0) skewX(30deg);
-      opacity: 0;
-    }
-  }
-  
-  @keyframes lightSpeedOut {
-    from {
-      opacity: 1;
-    }
-  
-    to {
-      -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
-      transform: translate3d(100%, 0, 0) skewX(30deg);
-      opacity: 0;
-    }
-  }
-  .lightSpeedOut {
-    -webkit-animation-name: lightSpeedOut;
-    animation-name: lightSpeedOut;
-    -webkit-animation-duration: 1s, 2s;
-    animation-duration: 1s, 2s;
-    -webkit-animation-delay: 0s, .3s;
-    animation-delay: 0s, .3s;
-    -webkit-animation-timing-function: ease-out, ease-in-out;
-    animation-timing-function: ease-out, ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-direction: normal;
-    animation-direction: normal;
-  }
-  @-webkit-keyframes tada {
-    from {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-    10%,
-    20% {
-      -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-    }
-    30%,
-    50%,
-    70%,
-    90% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-    }
-    40%,
-    60%,
-    80% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-    }
-    to {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-  }
-  @keyframes tada {
-    from {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-    10%,
-    20% {
-      -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-    }
-    30%,
-    50%,
-    70%,
-    90% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-    }
-    40%,
-    60%,
-    80% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-    }
-    to {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-  }
-  .tada {
-    -webkit-animation-name: tada;
-    animation-name: tada;
-    -webkit-animation-duration: 1s, 2s;
-    animation-duration: 1s, 2s;
-    -webkit-animation-delay: 0s, .3s;
-    animation-delay: 0s, .3s;
-    -webkit-animation-timing-function: ease-out, ease-in-out;
-    animation-timing-function: ease-out, ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-direction: normal;
-    animation-direction: normal;
-  }
+
 /* Modifying HTML elements */
 body {
   padding-top: 50px;
@@ -335,12 +45,6 @@ i:focus {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 6em;
   margin-left: -35px;
-}
-.navbar-title {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
-  letter-spacing: -1.5px;
-  cursor: pointer;
 }
 #logo {
   width: 50px;
@@ -411,12 +115,6 @@ input[type="text"]:focus {
 .search-result > a:focus {
   color: #2e7d32;
 }
-#counterC,
-#counterG,
-#counterM {
-  font-weight: bolder;
-  font-size: 16px;
-}
 #result {
   display: none;
   outline: none;
@@ -450,62 +148,6 @@ input[type="text"]:focus {
 }
 .dark-bluish-gray {
   color: #37474f;
-}
-/* Logout link */
-#logout:hover {
-  color: #37474F;
-  font-weight: bolder;
-  text-decoration: none;
-  transition: all .3s ease-in-out;
-}
-/* QR code generator */
-#qrCode {
-    margin: 15px;
-}
-/* Admin character management stuff */
-.navbar-icon {
-  width: 30px;
-  border-radius: 50%;
-  transition: all .3s ease-in-out
-}
-#character-list {
-  max-width: 100%;
-  margin: 50px auto;
-}
-.character-list-item {
-  font-size: 12px;
-  letter-spacing: 3px;
-  font-weight: bolder;
-  width: 25%;
-}
-.character-list-thumb,
-.game-list-thumb {
-  object-fit: fill; /* Do not scale the image */
-  object-position: center; /* Center the image within the element */
-  height: 100px;
-  width: 100px;
-  border-radius: 5px; 
-  border: 1px solid rgb(248,248,248);
-  box-shadow: none;
-  opacity: 1;
-  transition: all .3s ease-in-out;
-}
-.game-list-thumb {
-  width: 180px;
-  height: 160px;
-  max-width: 180px;
-  max-height: 160px;
-}
-.character-list-thumb:hover,
-.character-list-thumb:focus,
-.character-list-thumb:active,
-.game-list-thumb:hover,
-.game-list-thumb:focus,
-.game-list-thumb:active {
-  box-shadow: 2px 2px 6px rgb(150,150,150);
-  transform: translate(0, -1px);
-  opacity: .9;
-  transition: all .3s ease-in-out;
 }
 #totals {
   display: none;
@@ -548,83 +190,6 @@ input[type="text"]:focus {
     33.3333% {left: 0; width: 100%;z-index: 10;}
     to {left: 0; width: 100%;}
 }
-.index-list {
-  width: 80%; 
-  text-align: center;
-}
-.add-edit-list {
-  width: 75%; 
-  margin: 0 auto;
-  text-align: center;
-}
-
-.character-profile-img {
-  margin-top: 10px; 
-  width: 100%; 
-  height: auto;
-  border: none;
-  border-radius: 5px; 
-  box-shadow: 2px 2px 6px rgb(150,150,150);
-  opacity: .9;
-  transition: all .3s ease-in-out;  
-}
-.character-card {
-  width: 150px;
-  height: 150px;
-  margin: 10px 0 20px 0;
-  background-color: transparent;
-  border: none; 
-}
-#character-profile-img:hover,
-#character-profile-img:focus,
-#character-profile-img:active  {
-  box-shadow: none;
-  opacity: 1;
-  transform: translate(0, 1px);
-  transition: all .3s ease-in-out;
-} 
-.character-delete-img {
-  width: 200px;
-}
-.character-delete-img-game {
-  width: 400px;
-}
-.index-button {
-  float: right;
-  margin: 2.5px;
-}
-.input-bar,
-.login-bar {
-  margin: 30px 20px 30px 0;
-  padding: 5px;
-  width: 350px;
-  border-top: none;
-  border-right: none;
-  border-bottom: 1px solid rgb(0,0,0);
-  border-left: none;
-  outline: none;
-  border-radius: 0;
-  font-size: 16px;
-}
-.login-bar {
-  font-size: 16px;
-  margin: 10px 0;
-}
-.login-picture {
-  width: 100%;
-}
-#delete-warning {
-  max-width: 50%;
-  color: rgb(255,0,0);
-  font-weight: bolder;
-}
-#detail-view {
-  max-width: 100%;
-  min-height: 200px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 0 auto 20px auto;
-}
 /* Some modified Bootstrap stuff (Or I made them up to fix something) */
 .fixed-heading {
   text-align: center; 
@@ -634,10 +199,6 @@ input[type="text"]:focus {
 .fixed-heading-col {
   padding: 30px;
 }
-.fixed-heading-paragraph {
-  font-size: 16px;
-  text-align: left;
-}
 /* Make a shadow */
 .shadow {
   box-shadow: 2px 2px 4px rgb(150,150,150);
@@ -645,123 +206,18 @@ input[type="text"]:focus {
 .shadow:hover {
   box-shadow: none;
 }
-/* Description box */
-#desc {
-  line-height: 25px;
-}
-#desc-input {
-  border: 1px solid rgb(0,0,0);
-  resize: none;
-  width: 100%;
-  height: 215px;
-  overflow: scroll;
-}
-#desc-position {
-  float: right;
-}
-.nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
-  background:#fff;
-}
-.dropdown-menu {
-  display: none;
-  width: 200px;
-}
-.dropdown-menu > li {
-  padding: 5px 0;
-  float: right;
-}
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
-    .site-title {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 4em;
-      margin-left: -25px;
-    }
-    .container {
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-    .no-space {
-      letter-spacing: -25px;
-    }
-    .navbar {
-      display: none;
-    }
-    .navbar-icon {
-      display: none;
-    }
-    .dropdown {
-      display: block;
-    }
-    .dropdown-menu {
-      display: block;
-      width: 100%;
-    }
-    .dropdown-menu > li {
-      display: block;
-      float: none;
-    }
-    .character-list-thumb,
-    .game-list-thumb {
-      height: 200px;
-      width: 200px;
-    }
-    .character-card {
-      width: 250px;
-      height: 250px;
-      margin: 10px auto 20px auto;
-    }
-    #logo {
-      width: 35px;
-      margin-right: -25px;
-    }
-    .login-bar {
-      width: 250px;
-    }
-    .search-card {
-      margin: 0 auto;
-      width: 90%;
-    }
-    #character-list {
-      max-width: 100%;
-    }
-    #character-list-name,
-    #character-list-origin {
-      font-size: 14px;
-    }
-    #delete-warning {
-      max-width: 100%;
-    }
-    #detail-view {
-      max-width: 100%;
-    }
-    #input-container {
-      width: 100%;
-    }
-    .input-bar {
-      width: 250px;
-      margin-right: 0;
-    }
-    #search-btn {
-      float: right; 
-      margin: 30px 7px 30px 0;
-    }
-    .back-btn {
-      margin-top: 25px;
-    }
-    #desc-position {
-      float: none;
-    }
-    .index-list {
-      width: 100%;
-    }
-    .moogle-table {
-      width: 100%;
-    }
-    .moogle-modal-button {
-      float: none;
-      margin-bottom: 20px;
-    }
-
+  .search-card {
+    width: 90%;
+  }
+  .moogle-modal-button {
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+  }
+  .mix-buffer {
+    margin: 0;
+  }
 }
 
