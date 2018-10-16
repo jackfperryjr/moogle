@@ -94,6 +94,8 @@ i:focus {
 input[type="text"],
 input[type="text"]:focus {
   font-size: inherit;
+  border-radius: 50%;
+  background-color:#fefefe;
 }
 #search-icon {
   font-size: 16px;
@@ -105,7 +107,8 @@ input[type="text"]:focus {
 }
 #search:hover,
 #search:focus {
-  box-shadow: 1px 1px 2px rgb(200,200,200);
+  background-color:#000;
+  /* box-shadow: 1px 1px 2px rgb(200,200,200); */
   transition: all .3s ease-in-out;
 }
 .search-result,
@@ -194,10 +197,10 @@ input[type="text"]:focus {
 .fixed-heading {
   text-align: center; 
   width: 100%; 
-  margin: 30px auto 0 auto;
+  margin: 50px auto 0 auto;
 }
 .fixed-heading-col {
-  padding: 30px;
+  padding: 20px;
 }
 /* Make a shadow */
 .shadow {
