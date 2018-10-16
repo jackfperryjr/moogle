@@ -44,6 +44,10 @@ i:focus {
 .site-title {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 6em;
+  margin-left:-35px;
+}
+.letter-e {
+  margin-left:-12px;
 }
 #logo {
   width: 50px;
@@ -229,7 +233,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
   .mix-buffer {
     margin: 0;
   }
-  .mobile {
+  .letter-e {
     margin-left:-15px;
   }
 }
