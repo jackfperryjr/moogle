@@ -215,6 +215,13 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 .shadow:hover {
   box-shadow: none;
 }
+.search-bar {
+  padding:10px 0 10px 15px;
+  border-radius:500px;
+  background-color:#eceff1;
+  border:1px solid transparent;
+}
+
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
   .site-title {
@@ -235,6 +242,12 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
   }
   .letter-e {
     margin-left:-15px;
+  }
+  ::placeholder {
+    text-align: center;
+  }
+  .search-bar {
+    padding:10px 0;
   }
 }
 
