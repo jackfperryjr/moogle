@@ -98,7 +98,7 @@ input,
 input:focus {
   width:100%;
   font-size: inherit;
-  border-radius: 50%;
+  border-radius: 500px;
   background-color:#eceff1;
   outline:none !important;
   transition: all .3s ease-in-out;
