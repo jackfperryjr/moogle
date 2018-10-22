@@ -21,12 +21,16 @@ $("#search").attr("placeholder", randomPlaceholder);
 new Vue({
     el: "#vue-app",
     mounted: function() {
+        this.loading = true
         this.getCharacters()
     },
     methods: {
         getCharacters() {
             axios.get("https://www.moogleapi.com/api/characters")
-            .then(response => {this.character = response.data})
+            .then(response => {
+                this.loading = false
+                this.character = response.data
+            })
         },
         setModal(character) {
             this.modal = character
@@ -41,10 +45,12 @@ new Vue({
             let empty = "";
 
             if (!this.search) {
+                this.loading = false
                 return empty;
             }
 
             if (this.search) {
+                this.loading = true
                 let self = this;
                 filtered = this.character
                 .filter(function(character) {
@@ -59,10 +65,12 @@ new Vue({
                 // However, it doesn't work in some mobile browsers.
                 // Maybe it works now, I'm too lazy to find out.
             }
+            this.loading = false
             return filtered;
         },
     },
     data: {
+        loading: false,
         character: "",
         search: "",
         modal: {},

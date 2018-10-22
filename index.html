@@ -27,7 +27,8 @@
                 <i id="search-icon" class="glyphicon glyphicon-search form-control-feedback blue"></i>
             </form>
         </div>
-        <div v-for="(character) in filtered" :key="character.id" class="row moogle-row mix-buffer" >
+        <div v-if="loading" class="text-center"><img style="width:100px;" src="images/circle-loading.gif"></div>
+        <div v-if="!loading" v-for="(character) in filtered" :key="character.id" class="row moogle-row mix-buffer" >
             <div class="col-md-8">
                 <h4 class="moogle-h4"><strong>{{character.name}}</strong></h4>
                 <h7 class="search-result">To learn more visit <a :href="'https://www.google.com/search?q=final+fantasy+'+character.name" target="_blank">https://www.google.com/search?q={{character.name}}</a></h7><br/>
