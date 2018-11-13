@@ -31,7 +31,7 @@
                     </form>
                 </div>
                 <div v-for="(character) in filtered" :key="character.id" class="row moogle-row mix-buffer" >
-                    <div class="col-md-8">
+                    <div class="col-md-8 moogle-content">
                         <h4 class="moogle-h4"><strong>{{character.name}}</strong></h4>
                         <h7 class="search-result">To learn more visit <a :href="'https://www.google.com/search?q=final+fantasy+'+character.name" target="_blank">https://www.google.com/search?q={{character.name}}</a></h7><br/>
                         <p class="dark-bluish-gray">{{character.description}}</p>
@@ -49,6 +49,7 @@
                     </div>
                     <div class="col-md-4">
                         <button type="button" class="moogle-modal-button" data-toggle="modal" data-target="#imageModal" v-on:click="setModal(character)">
+                            <img class="img-spinner-on" src="images/circle-loading.gif">
                             <img class="moogle-img" :src="character.picture" :alt="character.name" title="Click to view a larger picture"><br/>
                         </button>
                         

@@ -38,19 +38,28 @@ new Vue({
         scrollTop() {
             $("html, body").animate({scrollTop:"0"}, 500)
         },
+        imageLoading() {
+            $(".img-spinner-on").show();
+        },
+        imageLoaded() {
+            setTimeout(function() {
+                $(".img-spinner-on").hide();
+                $(".moogle-img").show();
+                $(".moogle-content").show();
+            }, 3500);   
+        }
     },
     computed: {
         filtered: function() {
+            this.imageLoading();
             let filtered = this.character;
             let empty = "";
 
             if (!this.search) {
-                this.loading = false
                 return empty;
             }
 
             if (this.search) {
-                this.loading = true
                 let self = this;
                 filtered = this.character
                 .filter(function(character) {
@@ -65,7 +74,7 @@ new Vue({
                 // However, it doesn't work in some mobile browsers.
                 // Maybe it works now, I'm too lazy to find out.
             }
-            this.loading = false
+            this.imageLoaded();
             return filtered;
         },
     },
