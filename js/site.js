@@ -21,8 +21,10 @@ $("#search").attr("placeholder", randomPlaceholder);
 new Vue({
     el: "#vue-app",
     mounted: function() {
-        this.loading = true
+        // this.loading = true
         this.getCharacters()
+        $(".moogle-img").show(); //Placed here for now until I decided what to do about loading icons.
+        $(".moogle-content").show(); //Placed here for now until I decided what to do about loading icons.
     },
     methods: {
         getCharacters() {
@@ -37,17 +39,17 @@ new Vue({
         },
         scrollTop() {
             $("html, body").animate({scrollTop:"0"}, 500)
-        },
-        imageLoading() {
-            $(".img-spinner-on").show();
-        },
-        imageLoaded() {
-            setTimeout(function() {
-                $(".img-spinner-on").hide();
-                $(".moogle-img").show();
-                $(".moogle-content").show();
-            }, 3500);   
         }
+        // imageLoading() {
+        //     $(".img-spinner-on").show();
+        // },
+        // imageLoaded() {
+        //     setTimeout(function() {
+        //         $(".img-spinner-on").hide();
+        //         $(".moogle-img").show();
+        //         $(".moogle-content").show();
+        //     }, 3500);   
+        // }
     },
     computed: {
         filtered: function() {
@@ -79,7 +81,7 @@ new Vue({
         },
     },
     data: {
-        loading: false,
+        // loading: false,
         character: "",
         search: "",
         modal: {},
