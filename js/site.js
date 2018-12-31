@@ -28,7 +28,7 @@ new Vue({
         getCharacters() {
             axios.get("https://www.moogleapi.com/api/characters")
             .then(response => {
-                this.loading = false
+                //this.loading = false
                 this.character = response.data
             })
         },
@@ -51,7 +51,7 @@ new Vue({
     },
     computed: {
         filtered: function() {
-            this.imageLoading();
+            //this.imageLoading();
             let filtered = this.character;
             let empty = "";
 
@@ -74,7 +74,7 @@ new Vue({
                 // However, it doesn't work in some mobile browsers.
                 // Maybe it works now, I'm too lazy to find out.
             }
-            this.imageLoaded();
+            //this.imageLoaded();
             return filtered;
         },
     },
