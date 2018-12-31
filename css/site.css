@@ -125,7 +125,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
   color: #2e7d32;
 }
 #result {
-  display: none;
+  display: block; /* Change to none when implementing loading icons. */
   outline: none;
   width: 100%;
   overflow: scroll;
@@ -150,7 +150,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
   float: right;
 }
 .moogle-img {
-  display:none;
+  display:block; /* Change to none when implementing loading icons. */
   width: 200px;
 }
 .moogle-modal-img {
@@ -231,7 +231,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
   width:150px;
 }
 .moogle-content {
-  display:none;
+  display:block; /* Change to none when implementing loading icons. */
 }
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {

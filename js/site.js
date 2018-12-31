@@ -23,8 +23,6 @@ new Vue({
     mounted: function() {
         // this.loading = true
         this.getCharacters()
-        $(".moogle-img").show(); //Placed here for now until I decided what to do about loading icons.
-        $(".moogle-content").show(); //Placed here for now until I decided what to do about loading icons.
     },
     methods: {
         getCharacters() {
