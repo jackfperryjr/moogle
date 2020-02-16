@@ -1,0 +1,20 @@
+{
+    "name": "Moogle",
+    "short_name": "Moogle",
+    "description": "Small search engine for Final Fantasy.",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+      {
+        "src": "/icons/icon-square-moogle-192.png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icons/icon-square-moogle-512.png",
+        "sizes": "512x512"
+      }
+    ],
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "https://jackfperryjr.github.io/moogle-spa/"
+  }
