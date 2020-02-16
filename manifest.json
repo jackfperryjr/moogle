@@ -6,11 +6,11 @@
     "theme_color": "#ffffff",
     "icons": [
       {
-        "src": "/images/ff-moogle192.png",
+        "src": "images/ff-moogle192.png",
         "sizes": "192x192"
       },
       {
-        "src": "/images/ff-moogle512.png",
+        "src": "images/ff-moogle512.png",
         "sizes": "512x512"
       }
     ],
