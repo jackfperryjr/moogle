@@ -10,12 +10,12 @@ let randomPlaceholderList = [
     "Search ex. ''Tidus'' or ''10''",
     "Search ex. ''Refia'' or ''03''",
     "Search ex. ''Kefka'' or ''06''"
-];
+]
 
 // Randomly choosing from the list
-let randomPlaceholder = randomPlaceholderList[Math.floor(Math.random()*randomPlaceholderList.length)];
+let randomPlaceholder = randomPlaceholderList[Math.floor(Math.random()*randomPlaceholderList.length)]
 
-$("#search").attr("placeholder", randomPlaceholder);
+$("#search").attr("placeholder", randomPlaceholder)
 
 // Implementing VueJs
 new Vue({
@@ -27,10 +27,7 @@ new Vue({
     methods: {
         getCharacters() {
             axios.get("https://www.moogleapi.com/api/v1/characters")
-            .then(response => {
-                //this.loading = false
-                this.character = response.data
-            })
+            .then(response => { this.character = response.data })
         },
         setModal(character) {
             this.modal = character
@@ -38,35 +35,24 @@ new Vue({
         scrollTop() {
             $("html, body").animate({scrollTop:"0"}, 500)
         }
-        // imageLoading() {
-        //     $(".img-spinner-on").show();
-        // },
-        // imageLoaded() {
-        //     setTimeout(function() {
-        //         $(".img-spinner-on").hide();
-        //         $(".moogle-img").show();
-        //         $(".moogle-content").show();
-        //     }, 3500);   
-        // }
     },
     computed: {
         filtered: function() {
-            //this.imageLoading();
-            let filtered = this.character;
-            let empty = "";
+            let filtered = this.character
+            let empty = ""
 
             if (!this.search) {
-                return empty;
+                return empty
             }
 
             if (this.search) {
-                let self = this;
+                let self = this
                 filtered = this.character
                 .filter(function(character) {
                     return character.name.toLowerCase().indexOf(self.search) > -1
                     || character.name.indexOf(self.search) > -1
-                    || character.origin.toLowerCase().indexOf(self.search) > -1; 
-                });    
+                    || character.origin.toLowerCase().indexOf(self.search) > -1;
+                })
                 
                 //filtered = this.character
                 //.filter(c => c.name.toLowerCase().indexOf(self.search) > -1 || c.origin.toLowerCase().indexOf(self.search) > -1);
@@ -74,12 +60,10 @@ new Vue({
                 // However, it doesn't work in some mobile browsers.
                 // Maybe it works now, I'm too lazy to find out.
             }
-            //this.imageLoaded();
-            return filtered;
+            return filtered
         },
     },
     data: {
-        // loading: false,
         character: "",
         search: "",
         modal: {},

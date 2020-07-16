@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="moogle-modal-button" data-toggle="modal" data-target="#imageModal" v-on:click="setModal(character)">
+                        <button v-if="character.pictures" type="button" class="moogle-modal-button" data-toggle="modal" data-target="#imageModal" v-on:click="setModal(character)">
                             <!-- <img class="img-spinner-on" src="images/circle-loading.gif"> -->
                             <img class="moogle-img" :src="character.pictures[0].url" :alt="character.name" title="Click to view a larger picture"><br/>
                         </button>
@@ -82,7 +82,7 @@
                                         <h3 class="text-center"><strong>{{modal.name}}</strong><span class="close" data-dismiss="modal">X</span></h3>
                                     </div>
                                     <div class="modal-body">
-                                        <img class="moogle-modal-img" :src="modal.pictures[0].url" :alt="modal.name" :title="modal.name">
+                                        <img v-if="modal.pictures" class="moogle-modal-img" :src="modal.pictures[0].url" :alt="modal.name" :title="modal.name">
                                     </div>
                                 </div>
                             </div>
